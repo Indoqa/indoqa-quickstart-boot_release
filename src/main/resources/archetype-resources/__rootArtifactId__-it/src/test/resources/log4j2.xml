@@ -1,0 +1,21 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO" debug="true">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{ISO8601} [%t] %-5level %logger{1.} - %msg%n" />
+    </Console>
+    <File name="File" fileName="./target/app-it.log">
+      <PatternLayout pattern="%d{ISO8601} [%t] %-5level %logger - %msg%n" />
+    </File>  
+  </Appenders>
+
+  <Loggers>
+    <Root level="INFO">
+      <AppenderRef ref="Console" />
+      <AppenderRef ref="File" level="DEBUG" />
+    </Root>
+  </Loggers>
+</Configuration>

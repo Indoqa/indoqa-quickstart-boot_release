@@ -1,0 +1,43 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO" debug="true">
+  <Properties>
+    <Property name="log-path">${symbol_dollar}{sys:java.io.tmpdir}/${parentArtifactId}-main/logs</Property>
+    <Property name="log-level">INFO</Property>
+  </Properties>
+
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{ISO8601} [%t] %-5level %logger{1.} - %msg%n" />
+    </Console>
+    <Console name="ConsoleInit" target="SYSTEM_OUT">
+      <PatternLayout pattern="%msg%n" />
+    </Console>
+    <RollingFile name="File" fileName="${symbol_dollar}{sys:log-path}/${parentArtifactId}.log" filePattern="${symbol_dollar}{sys:log-path}/${parentArtifactId}-%d{yyyy-MM-dd}-%i.log">
+      <PatternLayout pattern="%d{ISO8601} [%t] %-5level %logger - %msg%n" />
+      <Policies>
+        <OnStartupTriggeringPolicy />
+        <SizeBasedTriggeringPolicy size="10 MB" />
+      </Policies>
+    </RollingFile>
+    <!-- Only log to console if the log-path has not been overwritten -->
+    <Routing name="ConsoleRouting">
+      <!--  see http://logging.apache.org/log4j/2.x/manual/configuration.html${symbol_pound}Lookup_Variables_with_Multiple_Leading__Characters -->
+      <Routes pattern="${symbol_dollar}${symbol_dollar}{sys:log-path}">
+        <Route ref="Console" key="./target" />
+      </Routes>
+    </Routing>
+  </Appenders>
+
+  <Loggers>
+    <Logger name="com.indoqa.boot.logging.InitializationLogger" additivity="false">
+      <AppenderRef ref="ConsoleInit" />
+    </Logger>
+    <Root level="${symbol_dollar}{sys:log-level}">
+      <AppenderRef ref="ConsoleRouting" />
+      <AppenderRef ref="File" />
+    </Root>
+  </Loggers>
+</Configuration>
