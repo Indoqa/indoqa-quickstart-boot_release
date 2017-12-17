@@ -14,9 +14,12 @@
   <artifactId>${artifactId}</artifactId>
   <name>Quickstart Indoqa Boot: Frontend</name>
 
- <profiles>
+  <profiles>
     <profile>
-      <id>indoqa-release</id>
+      <id>frontend</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <build>
         <plugins>
           <plugin>

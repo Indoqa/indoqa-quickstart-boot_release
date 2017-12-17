@@ -1,12 +1,11 @@
 // @flow
-
 import React from 'react'
 
 type Props = {
-  onAddTodo: Function,
+  addTodo: Function,
 };
 
-const AddTodo = ({onAddTodo}: Props) => {
+const AddTodo = ({addTodo}: Props) => {
   let input
 
   return (
@@ -14,10 +13,10 @@ const AddTodo = ({onAddTodo}: Props) => {
       <form
         onSubmit={(e) => {
           e.preventDefault()
-          if (!input.value.trim()) {
+          if (!input || !input.value.trim()) {
             return
           }
-          onAddTodo(input.value)
+          addTodo(input.value)
           input.value = ''
         }}
       >

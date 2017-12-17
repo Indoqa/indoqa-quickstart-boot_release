@@ -1,5 +1,4 @@
 // @flow
-
 import React from 'react'
 import {Box} from 'indoqa-react-fela'
 
@@ -8,11 +7,11 @@ import AddTodo from '../components/AddTodo.redux'
 import Footer from '../components/Footer.react'
 import TodoList from '../components/TodoList.redux'
 
-class TodosPage extends React.Component {
+class TodosPage extends React.Component<{}> {
 
   render() {
     return (
-      <MainMenuTemplate title="Time">
+      <MainMenuTemplate title="Todos">
         <Box p={1}>
           <AddTodo />
           <TodoList />

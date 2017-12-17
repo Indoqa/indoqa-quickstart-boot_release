@@ -1,5 +1,4 @@
 // @flow
-
 import React from 'react'
 import Todo from './Todo.react'
 import type {Todo as TodoType} from '../types/Todo'
@@ -12,11 +11,11 @@ type Props = {
 const TodoList = ({todos, onTodoClick}: Props) => (
   <ul>
     {todos.map((todo) =>
-      <Todo
+      (<Todo
         key={todo.id}
         todo={todo}
         onClick={() => onTodoClick(todo.id)}
-      />
+      />)
     )}
   </ul>
 )

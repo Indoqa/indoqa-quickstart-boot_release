@@ -13,7 +13,7 @@
     <project.build.compiler.version>1.8</project.build.compiler.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <indoqa-boot-version>0.8.0</indoqa-boot-version>
+    <indoqa-boot-version>0.9.0</indoqa-boot-version>
   </properties>
 
   <dependencyManagement>
@@ -31,8 +31,8 @@
         <type>pom</type>
       </dependency>
       <dependency>
-      	<groupId>${groupId}</groupId>
-      	<artifactId>${rootArtifactId}-main</artifactId>
+        <groupId>${groupId}</groupId>
+        <artifactId>${rootArtifactId}-main</artifactId>
         <version>${version}</version>
       </dependency>
       <dependency>
@@ -47,6 +47,19 @@
   </dependencyManagement>
 
   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>1.6.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -86,10 +99,6 @@
         <configuration>
           <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.0.0</version>
       </plugin>
     </plugins>
   </build>

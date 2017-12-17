@@ -1,5 +1,6 @@
+// @flow
 import {connect} from 'react-redux'
-import {fetchTime, clearTime} from '../store/time.actions'
+import {clearTime, fetchTime, fetchTimes} from '../store/time.actions'
 import Buttons from './Buttons.react'
 
 const mapDispatchToProps = (dispatch) => ({
@@ -9,6 +10,12 @@ const mapDispatchToProps = (dispatch) => ({
   loadNewYork: () => {
     dispatch(fetchTime(-74.0059700, 40.7142700))
   },
+  loadViennaAndNewYork: () => {
+    const coordinates = [
+      {lon: 10, lat: 47},
+      {lon: -74.0059700, lat: 40.7142700}]
+    dispatch(fetchTimes(coordinates))
+  },
   loadInvalidLocation: () => {
     dispatch(fetchTime(-1000, -1000))
   },
@@ -17,7 +24,4 @@ const mapDispatchToProps = (dispatch) => ({
   },
 })
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(Buttons)
+export default connect(null, mapDispatchToProps)(Buttons)

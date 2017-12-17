@@ -68,6 +68,12 @@
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
+          <directory>src/test</directory>
+          <includes>
+            <include>**/*.iml</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
           <directory>.settings</directory>
           <includes>
             <include>**/*.prefs</include>
@@ -109,19 +115,37 @@
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
+          <directory>src/main/words</directory>
+          <includes>
+            <include>**/*.js</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
           <directory>src/main/app</directory>
           <includes>
             <include>**/*.js</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
-          <directory>src/test/todos</directory>
+          <directory>src/test</directory>
           <includes>
             <include>**/*.js</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
-          <directory>src/dev</directory>
+          <directory>src/test/words</directory>
+          <includes>
+            <include>**/*.js</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/test/time</directory>
+          <includes>
+            <include>**/*.js</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/test/todos</directory>
           <includes>
             <include>**/*.js</include>
           </includes>
