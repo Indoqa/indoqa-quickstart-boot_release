@@ -165,6 +165,7 @@
             <include>.sublimelinterrc</include>
             <include>.gitignore</include>
             <include>.flowconfig</include>
+            <include>yarn-error.log</include>
             <include>yarn.lock</include>
           </includes>
         </fileSet>
