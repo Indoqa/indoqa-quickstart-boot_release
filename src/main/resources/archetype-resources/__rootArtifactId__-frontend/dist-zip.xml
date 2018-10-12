@@ -15,8 +15,8 @@
 
   <fileSets>
     <fileSet>
-      <directory>target/webpack/assets/</directory>
-      <outputDirectory>${symbol_dollar}{project.artifactId}/assets</outputDirectory>
+      <directory>target/webpack/</directory>
+      <outputDirectory>${symbol_dollar}{project.artifactId}/</outputDirectory>
     </fileSet>
   </fileSets>
 

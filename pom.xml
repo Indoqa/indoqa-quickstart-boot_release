@@ -4,7 +4,7 @@
 
   <groupId>com.indoqa.quickstart</groupId>
   <artifactId>quickstart-boot-archetype</artifactId>
-  <version>0.11.1-SNAPSHOT</version>
+  <version>0.10.1-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <parent>
