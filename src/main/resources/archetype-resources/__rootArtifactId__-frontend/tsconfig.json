@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "es5",
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "allowJs": false,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "declaration": false,
+    "sourceMap": true,
+    "jsx": "react",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "fela-preset-web" : ["./node_modules/fela"],
+      "react-i18next": ["./src/typings/react-i18next"]
+    }
+  },
+  "compileOnSave": true,
+  "include": ["src/main/**/*", "src/typings/*"],
+  "exclude": ["node_modules", "src/**/*.spec.*"]
+}

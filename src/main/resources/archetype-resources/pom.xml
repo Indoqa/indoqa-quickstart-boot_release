@@ -13,7 +13,7 @@
     <project.build.compiler.version>1.8</project.build.compiler.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <indoqa-boot-version>0.10.0</indoqa-boot-version>
+    <indoqa-boot-version>0.11.0</indoqa-boot-version>
   </properties>
 
   <dependencyManagement>
