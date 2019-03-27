@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <assembly xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
@@ -15,8 +12,8 @@
 
   <fileSets>
     <fileSet>
-      <directory>target/webpack/</directory>
-      <outputDirectory>${symbol_dollar}{project.artifactId}/</outputDirectory>
+      <directory>./build</directory>
+      <outputDirectory>${project.artifactId}/</outputDirectory>
     </fileSet>
   </fileSets>
 

@@ -6,14 +6,13 @@
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
   <version>${version}</version>
-  <name>Quickstart Indoqa Boot</name>
-  <description>A quickstart for Java/React projects based on Indoqa Boot</description>
+  <name>${artifactId}-archetype</name>
 
   <properties>
     <project.build.compiler.version>1.8</project.build.compiler.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <indoqa-boot-version>0.11.0</indoqa-boot-version>
+    <indoqa-boot-version>0.13.0</indoqa-boot-version>
   </properties>
 
   <dependencyManagement>
@@ -102,4 +101,38 @@
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>frontend</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <inherited>false</inherited>
+            <executions>
+              <execution>
+                <id>yarn install</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>exec</goal>
+                </goals>
+                <configuration>
+                  <executable>yarn</executable>
+                  <arguments>
+                    <argument>install</argument>
+                  </arguments>
+                  <workingDirectory>${basedir}/</workingDirectory>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>

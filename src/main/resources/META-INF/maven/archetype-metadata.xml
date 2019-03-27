@@ -3,15 +3,20 @@
     xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <fileSets>
-    <fileSet encoding="UTF-8">
-      <directory>.settings</directory>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory></directory>
       <includes>
-        <include>**/*.prefs</include>
+        <include>tsconfig.json</include>
+        <include>lerna.json</include>
+        <include>package.json</include>
+        <include>tsconfig.base.json</include>
+        <include>tslint.json</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
+        <include>.gitignore.sample</include>
         <include>.gitignore</include>
       </includes>
     </fileSet>
@@ -25,30 +30,17 @@
             <include>**/*.java</include>
           </includes>
         </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
+        <fileSet encoding="UTF-8">
           <directory>src/main/resources</directory>
           <includes>
             <include>**/*.xml</include>
             <include>**/*.properties</include>
           </includes>
         </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
+        <fileSet encoding="UTF-8">
           <directory>src/main/assembly</directory>
           <includes>
             <include>**/*.xml</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>.settings</directory>
-          <includes>
-            <include>**/*.prefs</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>.project</include>
-            <include>.classpath</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -61,12 +53,6 @@
             <include>**/*.java</include>
           </includes>
         </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/test/resources</directory>
-          <includes>
-            <include>**/*.xml</include>
-          </includes>
-        </fileSet>
         <fileSet encoding="UTF-8">
           <directory>src/test</directory>
           <includes>
@@ -74,16 +60,9 @@
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
-          <directory>.settings</directory>
+          <directory>src/test/resources</directory>
           <includes>
-            <include>**/*.prefs</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>.project</include>
-            <include>.classpath</include>
+            <include>**/*.xml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -91,64 +70,78 @@
     <module id="${rootArtifactId}-frontend" dir="__rootArtifactId__-frontend" name="${rootArtifactId}-frontend">
       <fileSets>
         <fileSet encoding="UTF-8">
-          <directory>src/main/overview</directory>
+          <directory>src/overview</directory>
           <includes>
             <include>**/*.css</include>
             <include>**/*.tsx</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
-          <directory>src/main/time</directory>
+          <directory>src/time</directory>
           <includes>
             <include>**/*.tsx</include>
             <include>**/*.ts</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
-          <directory>src/main</directory>
+          <directory>public</directory>
+          <includes>
+            <include>**/*.html</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src</directory>
+          <includes>
+            <include>**/*.tsx</include>
+            <include>**/*.js</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/forms</directory>
+          <includes>
+            <include>**/*.tsx</include>
+            <include>**/*.ts</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/upload</directory>
           <includes>
             <include>**/*.tsx</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
-          <directory>src/main/commons</directory>
+          <directory>src/commons</directory>
           <includes>
             <include>**/*.tsx</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
-          <directory>src/main/app</directory>
+          <directory>src/app</directory>
+          <includes>
+            <include>**/*.tsx</include>
+            <include>**/*.ts</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/words</directory>
           <includes>
             <include>**/*.tsx</include>
             <include>**/*.ts</include>
           </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/typings</directory>
-          <includes>
-            <include>**/*.txt</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>src/typings</directory>
-          <includes>
-            <include>**/*.ts</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>dist-zip.xml</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
           <directory></directory>
           <includes>
             <include>tsconfig.json</include>
             <include>package.json</include>
-            <include>indoqa-webpack-options.js</include>
-            <include>indoqa-react-redux-ts.iml</include>
             <include>tslint.json</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>dist-zip.xml</include>
+            <include>.env</include>
             <include>.gitignore</include>
           </includes>
         </fileSet>
