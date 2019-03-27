@@ -9,7 +9,7 @@
   </parent>
   <groupId>com.indoqa.quickstart</groupId>
   <artifactId>quickstart-boot-archetype</artifactId>
-  <version>0.13.0</version>
+  <version>0.14.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>quickstart-boot-archetype</name>
@@ -19,7 +19,7 @@
     <connection>scm:git:git@github.com:Indoqa/indoqa-quickstart-boot_release.git</connection>
     <developerConnection>scm:git:git@github.com:Indoqa/indoqa-quickstart-boot_release.git</developerConnection>
     <url>https://github.com/Indoqa/indoqa-quickstart-boot_release</url>
-    <tag>quickstart-boot-archetype-0.13.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <build>
