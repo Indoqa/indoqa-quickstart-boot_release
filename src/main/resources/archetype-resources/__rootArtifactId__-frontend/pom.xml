@@ -12,7 +12,7 @@
   </parent>
 
   <artifactId>${artifactId}</artifactId>
-  <name>Quickstart Indoqa Boot: Frontend</name>
+  <name>Frontend</name>
 
   <profiles>
     <profile>

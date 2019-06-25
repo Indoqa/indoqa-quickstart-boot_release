@@ -12,7 +12,7 @@
   </parent>
 
   <artifactId>${artifactId}</artifactId>
-  <name>Quickstart Indoqa Boot: Integration Tests</name>
+  <name>Integration Tests</name>
 
   <dependencies>
     <dependency>

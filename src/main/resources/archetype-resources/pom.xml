@@ -6,13 +6,13 @@
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
   <version>${version}</version>
-  <name>${artifactId}-archetype</name>
+  <name>${artifactId}</name>
 
   <properties>
     <project.build.compiler.version>1.8</project.build.compiler.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <indoqa-boot-version>0.13.0</indoqa-boot-version>
+    <indoqa-boot-version>0.14.0</indoqa-boot-version>
   </properties>
 
   <dependencyManagement>
