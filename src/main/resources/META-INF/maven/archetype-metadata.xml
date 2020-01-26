@@ -73,6 +73,7 @@
           <directory>src/overview</directory>
           <includes>
             <include>**/*.css</include>
+            <include>**/*.svg</include>
             <include>**/*.tsx</include>
           </includes>
         </fileSet>
@@ -94,6 +95,7 @@
           <includes>
             <include>**/*.tsx</include>
             <include>**/*.js</include>
+            <include>**/*.ts</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
